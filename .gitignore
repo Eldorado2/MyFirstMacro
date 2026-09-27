@@ -1,0 +1,10 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio temp folder
+.vs/
+
+# User-specific configuration files
+*.user
+*.suo
