@@ -6,7 +6,10 @@ Imports System
 
 Partial Class SolidWorksMacro
     Public Sub main()
-        ''' EEE
+        Dim message As String
+        message = "Hello World"
+        'Show the message
+        MsgBox(message)
 
     End Sub
     ''' <summary>
