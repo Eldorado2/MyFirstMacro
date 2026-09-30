@@ -7,7 +7,10 @@ Imports System
 Partial Class SolidWorksMacro
     Public Sub main()
         Dim message As String
-        message = "Hello World"
+        Dim swVersion As Integer
+        swVersion = swApp.DateCode
+
+        message = "Hello Solidworks " & swVersion.ToString
         'Show the message
         MsgBox(message)
 
