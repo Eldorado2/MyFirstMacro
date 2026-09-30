@@ -8,9 +8,15 @@ Partial Class SolidWorksMacro
     Public Sub main()
         Dim message As String
         Dim swVersion As Integer
+        Dim swDoc As ModelDoc2
+        Dim swTitle As String
+
+        swDoc = swApp.ActiveDoc
+        swTitle = swDoc.GetTitle
         swVersion = swApp.DateCode
 
-        message = "Hello Solidworks " & swVersion.ToString
+        message = "Hello Solidworks " & swVersion.ToString _
+            & vbCrLf & "Document: " & swTitle
         'Show the message
         MsgBox(message)
 
