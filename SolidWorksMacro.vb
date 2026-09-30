@@ -16,9 +16,16 @@ Partial Class SolidWorksMacro
         swVersion = swApp.DateCode
 
         message = "Hello Solidworks " & swVersion.ToString _
-            & vbCrLf & "Document: " & swTitle
+            & vbCrLf & "Document: " & swTitle _
+            & vbCrLf & "Would you like to close the active document?"
+
         'Show the message
-        MsgBox(message)
+        Dim response As MsgBoxResult
+        response = MsgBox(message, MsgBoxStyle.YesNo)
+
+        If response = MsgBoxResult.Yes Then
+            swApp.CloseDoc(swTitle)
+        End If
 
     End Sub
     ''' <summary>
