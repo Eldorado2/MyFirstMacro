@@ -12,6 +12,8 @@ Partial Class SolidWorksMacro
         Dim swTitle As String
 
         swDoc = swApp.ActiveDoc
+        If swDoc Is Nothing Then Exit Sub
+
         swTitle = swDoc.GetTitle
         swVersion = swApp.DateCode
 
