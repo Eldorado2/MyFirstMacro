@@ -12,7 +12,10 @@ Partial Class SolidWorksMacro
         Dim swTitle As String
 
         swDoc = swApp.ActiveDoc
-        If swDoc Is Nothing Then Exit Sub
+        If swDoc Is Nothing Then
+            MsgBox("No active document found.")
+            Exit Sub
+        End If
 
         swTitle = swDoc.GetTitle
         swVersion = swApp.DateCode
